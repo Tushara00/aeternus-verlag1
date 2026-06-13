@@ -91,7 +91,7 @@ h1.headline .l2,h1.headline .l3{display:block;}
 
 /* MARQUEE */
 .marquee{border-top:1px solid var(--border);border-bottom:1px solid var(--border);background:rgba(34,29,24,.5);}
-.marquee .row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 40px;padding:24px 0;}
+.marquee .row{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:16px 40px;padding:24px 10px;}
 .marquee .label{font-family:var(--font-sans);font-size:10px;letter-spacing:.32em;text-transform:uppercase;color:var(--muted);}
 .marquee .item{font-family:var(--font-display);font-style:italic;font-size:18px;color:rgba(236,227,208,.7);}
 
@@ -160,6 +160,7 @@ h2.title-xl .nostyle{font-style:normal;}
 
 .catalog-grid{margin-top:64px;display:grid;grid-template-columns:repeat(2,1fr);gap:64px 32px;}
 @media(min-width:900px){.catalog-grid{grid-template-columns:repeat(3,1fr);gap:64px 40px;}}
+@media(max-width:45px){.catalog-grid{grid-template-columns:repeat(1,1fr);gap:64px 40px;}}
 .book-card{display:block;position:relative;transition:transform .6s cubic-bezier(.2,.7,.2,1);
 background-color: var(--card-bg);}
 .book-card::after{content:"";position:absolute;left:0;right:0;bottom:-1px;height:1px;background:var(--gold);transform:scaleX(0);transform-origin:left;transition:transform .7s cubic-bezier(.2,.7,.2,1);}
@@ -326,6 +327,12 @@ footer.site .inner{padding:80px 20px;}
 .lang-btn{background:none;border:0;color:var(--ink-faint);cursor:pointer;padding:0;letter-spacing:.28em;font-family:var(--sans);font-size:11px}
 .lang-btn.is-active{color:var(--gold)}
 .lang-sep{color:var(--ink-faint)}
+.lede{
+  font-size:18px;
+line-height:1.7;
+color:rgba(236,227,208,.85);
+margin-bottom: 24px;
+}
 
  
 
