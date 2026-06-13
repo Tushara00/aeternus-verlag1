@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>{{title}}</title>
+<meta name="description" content="Ironwell & Vance is an independent publishing house printing first editions on military history, statecraft, and economic theory since 1894." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+{% include 'header.njk' %}
+   {{content | safe}} 
+{% include 'footer.njk' %}
+<script>
+  // Cursor-tracked glow on category tiles
+  document.getElementById('catGrid')?.addEventListener('mousemove', (e) => {
+    const tile = e.target.closest('[data-tile]');
+    if (!tile) return;
+    const r = tile.getBoundingClientRect();
+    tile.style.setProperty('--mx', (e.clientX - r.left) + 'px');
+    tile.style.setProperty('--my', (e.clientY - r.top) + 'px');
+  });
+
+ <!-- Language Switching Engine -->
+function switchLanguage(lang, button) {
+            // Update active state class on buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            // Loop through and swap text contents based on target data-attributes
+            document.querySelectorAll('[data-de]').forEach(element => {
+                if (lang === 'en') {
+                    element.textContent = element.getAttribute('data-en');
+                } else {
+                    element.textContent = element.getAttribute('data-de');
+                }
+            });
+            
+   // Adjust semantic document locale tag
+            document.documentElement.lang = lang;
+        }
+
+
+</script>
+</body>
+</html>

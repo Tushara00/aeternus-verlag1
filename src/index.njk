@@ -1,0 +1,163 @@
+---
+title: example
+layout: base.njk
+---
+
+<main>
+<section class="hero">
+  <img class="hero-bg" src="assets/images/hero-library.jpg" alt="Antique books, military map, brass compass and candle on a mahogany desk" />
+  <div class="hero-veil"></div>
+  <div class="hero-vignette vignette"></div>
+  <div class="hero-grain paper-grain"></div>
+  <div class="wrap hero-inner">
+    <div>
+      <div class="eyebrow imperial"><span class="line"></span><span>Top Title Placeholder</span></div>
+      <h1 class="headline">
+        <span class="l1 gold-grad">Main Heading </span>
+        <span class="l2">Title</span>
+        <span class="l3">Placeholder</span>
+      </h1>
+      <p class="lede">Heading-Subtitle placeholder</p>
+      <div class="cta-row">
+        <a href="#catalog" class="btn btn-primary">View the Catalogue <span class="ar">→</span></a>
+        <a href="#featured" class="btn-link">Featured Edition</a>
+      </div>
+    </div>
+    <div class="metrics">
+      <div class="metric"><div class="n">1894</div><div class="l">Founded, Berlin</div></div>
+      <div class="metric"><div class="n">466</div><div class="l">Titles in print</div></div>
+      <div class="metric"><div class="n">27</div><div class="l">Living authors</div></div>
+      <div class="metric"><div class="n">12</div><div class="l">Languages</div></div>
+    </div>
+  </div>
+</section>
+
+<section id="imprint" class="block imprint">
+  <div class="paper-grain" style="position:absolute;inset:0;opacity:.3;pointer-events:none;"></div>
+
+  <div class="wrap imprint-grid">
+  
+    <div>
+      <div class="eyebrow-mini">✦ ABOUT US</div>
+      <h2 class="title-xl"><span class="gold-grad">A house built</span><br/><span class="nostyle">on lead and linen.</span></h2>
+    </div>
+    <div>
+      <p>ABOUT US- Content Placeholder.<br/>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software including versions of Lorem Ipsum.
+      </p>
+      <p class="sig">— The Editors, AETERNUS VERLAG</p>
+    </div>
+  </div>
+</section>
+
+<section class="marquee">
+  <div class="wrap row">
+    <span class="label">Reviewed in —</span>
+    <span class="item">Foreign Affairs</span>
+    <span class="item">The Economist</span>
+    <span class="item">Times Literary Supplement</span>
+    <span class="item">Foreign Policy</span>
+    <span class="item">Naval Review</span>
+    <span class="item">Wall Street Journal</span>
+  </div>
+</section>
+
+<section id="featured" class="block">
+  <div class="paper-grain" style="position:absolute;inset:0;opacity:.3;pointer-events:none;"></div>
+  <div class="wrap featured-grid">
+    <div class="book-frame">
+      <div class="glow"></div>
+      <div class="shot"><img src="assets/images/book-featured.jpg" alt="The Long War — first edition, navy cloth with gold-foil title" /></div>
+      <div class="caption"><span class="line"></span><span>First Edition · 1,200 copies</span><span class="line"></span></div>
+    </div>
+    <div>
+      <div class="eyebrow-mini">✦ Featured Volume</div>
+      <h2 class="title-xl"><span class="gold-grad">The Long War,</span><br/><span class="nostyle">1914 — 1991.</span></h2>
+      <p class="byline">by <span style="color:var(--parchment);">Sir Henry Ashbourne</span> · <em>Series in Strategic Theory, Vol. XIV</em></p>
+      <div class="rule-gold" style="margin-top:40px;"></div>
+      <p style="margin-top:40px;max-width:560px;font-size:18px;line-height:1.65;color:rgba(236,227,208,.85);">A singular account of the twentieth century read as one continuous conflict — from the trenches of the Marne to the dissolution of the Soviet Union. Ashbourne writes with the gravity of the historian and the precision of the strategist.</p>
+      <dl class="specs">
+        <div class="row"><dt>Pages</dt><dd>812</dd></div>
+        <div class="row"><dt>Format</dt><dd>Octavo, cloth</dd></div>
+        <div class="row"><dt>Binding</dt><dd>Smyth-sewn</dd></div>
+        <div class="row"><dt>Paper</dt><dd>Mohawk Superfine</dd></div>
+        <div class="row"><dt>Printed</dt><dd>Oxford, England</dd></div>
+        <div class="row"><dt>Price</dt><dd>£ 78.00</dd></div>
+      </dl>
+      <div class="featured-cta">
+        <a href="#" class="btn btn-gold">Reserve a Copy <span class="ar">→</span></a>
+        <a href="#" class="read-link">Read the opening chapter</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<section id="catalog" class="block">
+  <div class="wrap">
+    <div class="cat-bar">
+      <div>
+        <div class="eyebrow-mini">✦ Spring Catalogue, MMXXVI</div>
+        <h2 class="title-xl" style="font-size:clamp(36px,4.5vw,56px);margin-top:16px;">Newly bound.</h2>
+      </div>
+      <a href="#" class="all">All 466 titles →</a>
+    </div>
+    <div class="catalog-grid">
+    {% for book in catalog %}
+     <a href="#" class="book-card" style="--card-bg: {{ book.bg_color }}; --card-hover: {{ book.hover_bg }}; --card-accent: {{ book.accent_color }}; padding:2rem;border-radius:10px">
+      <div class="cover">
+      <img src={{book.image |url}} alt="Cannae, 216 B.C. — cloth-bound first edition"/>
+      </div>
+      <div class="meta">
+      <span>{{book.de.id}}</span>
+      <span>{{book.de.category}}</span>
+      </div><h3>{{book.de.title}}</h3>
+      <p class="author">{{book.de.description}}</p>
+      </a>
+      {% endfor %}
+
+      
+      
+    </div>
+  </div>
+</section>
+
+<section id="series" class="block cat-section">
+  <div class="wrap">
+    <div class="cat-head">
+      <div>
+        <div class="eyebrow-mini">✦ The Standing Series</div>
+        <h2 class="title-xl">Five Säule ,<br/><span class="gold-grad nostyle">one long argument.</span></h2>
+      </div>
+      <p>Each edition within our five pillars is curated by a sitting editor and a council of scholars. New volumes are admitted to the Master Matrix only by unanimous vote</p>
+    </div>
+    <div class="cat-grid" id="catGrid">
+      <a href="#catalog" class="tile" data-tile><div class="top"><span class="num">№ I</span><span class="imperial-xs muted">184 titles</span></div><h3>Military History</h3><p>Campaigns, command, and the long shadow of arms — from Cannae to the Caucasus.</p><div class="more">Browse the series <span class="bar"></span></div></a>
+<a href="#catalog" class="tile" data-tile><div class="top"><span class="num">№ I</span><span class="imperial-xs muted">184 titles</span></div><h3>Military History</h3><p>Campaigns, command, and the long shadow of arms — from Cannae to the Caucasus.</p><div class="more">Browse the series <span class="bar"></span></div></a>
+
+
+
+      <a href="#catalog" class="tile" data-tile><div class="top"><span class="num">№ II</span><span class="imperial-xs muted">127 titles</span></div><h3>Political Economy</h3><p>Classical and Austrian thought, monetary history, and the architecture of markets.</p><div class="more">Browse the series <span class="bar"></span></div></a>
+      <a href="#catalog" class="tile" data-tile><div class="top"><span class="num">№ III</span><span class="imperial-xs muted">92 titles</span></div><h3>Statecraft &amp; Diplomacy</h3><p>Treaties, intelligence, and the quiet machinery of empire and republic.</p><div class="more">Browse the series <span class="bar"></span></div></a>
+      <a href="#catalog" class="tile" data-tile><div class="top"><span class="num">№ IV</span><span class="imperial-xs muted">63 titles</span></div><h3>Strategic Theory</h3><p>Clausewitz to the present — doctrine, deterrence, and the conduct of war.</p><div class="more">Browse the series <span class="bar"></span></div></a>
+    </div>
+  </div>
+</section>
+
+  <section class="state">
+    <div class="container1 box">
+      <p class="eyebrow" data-i18n="hero.eyebrow">✦ EDITIO PERPETUA · MMXXVI</p>
+      <h1 class="display" data-i18n="hero.title">Books built to outlast</h1>
+      <p class="lede" data-i18n="hero.lede">Five editorial pillars. One unmoving measure. Aeternus binds what time cannot dissolve — world literature, campaigns, empires, industry, and the forgotten adventures of generations to come.</p>
+      <div class="hero-meta">
+        <span data-i18n="hero.meta.left">V Säulen</span>
+        <span class="dot">·</span>
+        <span data-i18n="hero.meta.right">V Pillars
+·
+CDLXVI titles in print</span>
+      </div>
+    </div>
+  </section>
+</main>
+
+

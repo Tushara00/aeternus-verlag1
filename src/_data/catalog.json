@@ -1,0 +1,69 @@
+[
+  {
+    "image": "assets/images/book-3.jpg",
+    "bg_color": "#1C1D1F",
+    "hover_bg": "#2a1f1f",
+    "accent_color": "#ff4a4a",
+    "de": {
+      "id": "Säule  01",
+      "category": "ANTHRAZIT",
+      "title": "Catalog-Title",
+      "description": "Catalog-description",
+      "alt_text": "Cannae, 216 v. Chr. — gebundene Erstausgabe"
+    }
+  },
+  {
+    "image": "assets/images/book-2.jpg",
+    "bg_color": "#142318",
+    "hover_bg": "#2a1f1f",
+    "accent_color": "#ff4a4a",
+    "de": {
+      "id": "Säule  02",
+      "category": "GRÜN",
+      "title": "Catalog-Title",
+      "description": "Catalog-description",
+      "alt_text": "Eine concise Ökonomie — gebundene Erstausgabe"
+    }
+  },
+  {
+    "image": "assets/images/book-1.jpg",
+        "bg_color": "#2C0909",
+    "hover_bg": "#2a1f1f",
+    "accent_color": "#ff4a4a",
+    "de": {
+      "id": "Säule  03",
+      "category": "ROT",
+      "title": "Catalog-Title",
+      "description": "Catalog-description",
+      "alt_text": "Eine concise Ökonomie — gebundene Erstausgabe"
+    }
+  },
+  {
+    "image": "assets/images/book-featured.jpg",
+        "bg_color": "#071321",
+    "hover_bg": "#2a1f1f",
+    "accent_color": "#ff4a4a",
+    "de": {
+      "id": "Säule  04",
+      "category": "BLAUE REIHE",
+      "title": "Catalog-Title",
+      "description": "Catalog-description",
+      "alt_text": "Eine concise Ökonomie — gebundene Erstausgabe"
+    }
+  },
+
+  {
+    "image": "assets/images/book-4.jpg",
+        "bg_color": "#3D2308",
+    "hover_bg": "#2a1f1f",
+    "accent_color": "#ff4a4a",
+    "de": {
+      "id": "Säule  05",
+      "category": "BERNSTEIN-SERIE",
+      "title": "Catalog-Title",
+      "description": "Catalog-description",
+      "alt_text": "Eine concise Ökonomie — gebundene Erstausgabe"
+    }
+  }
+
+]

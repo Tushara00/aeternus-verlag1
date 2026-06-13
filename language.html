@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>The Master Matrix — Premium Publishing Houses</title>
+    <!-- Elegant Serif and Sans-Serif Fonts -->
+    <link rel="preconnect" href="https://googleapis.com">
+    <link rel="preconnect" href="https://gstatic.com" crossorigin>
+    <link href="https://googleapis.com/css2?family=Cinzel:wght@400;600&family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+    
+    <style>
+        /* CSS Reset & Variable Setup */
+        * {
+            margin: 0;
+            padding: 0;
+            box-style: border-box;
+        }
+
+        body {
+            background-color: #0b0c0d;
+            font-family: 'Inter', sans-serif;
+            color: #ffffff;
+            padding: 4rem 2rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Language Switcher Button Styling */
+        .lang-switcher-container {
+            margin-bottom: 3rem;
+            display: flex;
+            gap: 0.5rem;
+            background: #16181a;
+            padding: 0.35rem;
+            border-radius: 4px;
+            border: 1px solid #2a2d30;
+        }
+
+        .lang-btn {
+            background: transparent;
+            border: none;
+            color: #8a8f98;
+            padding: 0.5rem 1rem;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.85rem;
+            font-weight: 400;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            border-radius: 3px;
+        }
+
+        .lang-btn.active {
+            background: #ffffff;
+            color: #0b0c0d;
+            font-weight: 600;
+        }
+
+        /* Grid Layout Configuration */
+        .matrix-grid {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            max-width: 1100px;
+            width: 100%;
+        }
+
+        /* Individual Pillar Box Styling */
+        .pillar-card {
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 3rem 2.5rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            transition: transform 0.4s ease, box-shadow 0.4s ease;
+            border-radius: 4px;
+        }
+
+        .pillar-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Specific Color Blocks Assignment */
+        .pillar-anthrazit { background: linear-gradient(135deg, #1c1d1f 0%, #121314 100%); border-left: 4px solid #4a4e54; }
+        .pillar-gruen { background: linear-gradient(135deg, #142418 0%, #0b140e 100%); border-left: 4px solid #2e5437; }
+        .pillar-rot { background: linear-gradient(135deg, #330b0b 0%, #1c0505 100%); border-left: 4px solid #821c1c; }
+        .pillar-blau { background: linear-gradient(135deg, #091729 0%, #040b14 100%); border-left: 4px solid #1a3c66; }
+        .pillar-bernstein { background: linear-gradient(135deg, #3d2308 0%, #1f1103 100%); border-left: 4px solid #9c5c16; }
+
+        /* Typography Structural Hierarchy */
+        .pillar-meta {
+            font-family: 'Cinzel', serif;
+            font-size: 0.8rem;
+            letter-spacing: 4px;
+            color: rgba(255, 255, 255, 0.5);
+            text-transform: uppercase;
+            margin-bottom: 0.75rem;
+        }
+
+        .pillar-title {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 2.25rem;
+            font-weight: 400;
+            line-height: 1.2;
+            color: #ffffff;
+            margin-bottom: 1rem;
+        }
+
+        /* Gold highlight accents tailored for the Imperial / Premium look */
+        .pillar-rot .pillar-title { color: #f3e5d8; }
+        .pillar-bernstein .pillar-title { color: #fcefd2; }
+
+        .pillar-description {
+            font-family: 'Cormorant Garamond', serif;
+            font-size: 1.25rem;
+            font-style: italic;
+            line-height: 1.6;
+            color: rgba(255, 255, 255, 0.75);
+            max-width: 850px;
+        }
+
+        /* Responsive Layout Overrides */
+        @media (min-width: 768px) {
+            .pillar-card {
+                padding: 3.5rem 4rem;
+            }
+            .pillar-title {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Language Selector Toggles -->
+    <div class="lang-switcher-container">
+        <button class="lang-btn active" onclick="switchLanguage('de', this)">DE</button>
+        <button class="lang-btn" onclick="switchLanguage('en', this)">EN</button>
+    </div>
+
+    <!-- The 5 Pillar Blocks -->
+    <main class="matrix-grid">
+
+        <!-- Pillar I: Anthrazit -->
+        <section class="pillar-card pillar-anthrazit">
+            <div class="pillar-meta" data-de="Säule I: Anthrazit" data-en="Pillar I: Anthracite">Säule I: Anthrazit</div>
+            <h2 class="pillar-title" data-de="Weltliteratur & Ur-Konflikte" data-en="World Literature & Primal Conflicts">Weltliteratur & Ur-Konflikte</h2>
+            <p class="pillar-description" 
+               data-de="Das ewige Monument des menschlichen Schicksals, der klassischen Tragödie und der philosophischen Schwere." 
+               data-en="The eternal monument of human destiny, classical tragedy, and philosophical gravity.">
+               Das ewige Monument des menschlichen Schicksals, der klassischen Tragödie und der philosophischen Schwere.
+            </p>
+        </section>
+
+        <!-- Pillar II: Grün -->
+        <section class="pillar-card pillar-gruen">
+            <div class="pillar-meta" data-de="Säule II: Grün" data-en="Pillar II: Green">Säule II: Grün</div>
+            <h2 class="pillar-title" data-de="Militär, Generäle & Expeditionen" data-en="Military, Generals & Expeditions">Militär, Generäle & Expeditionen</h2>
+            <p class="pillar-description" 
+               data-de="Die Chronik angewandter Willenskraft im Feld, militärischer Präzision und unberührter Wildnis." 
+               data-en="The chronicle of applied willpower in the field, military precision, and unexplored wilderness.">
+               Die Chronik angewandter Willenskraft im Feld, militärischer Präzision und unberührter Wildnis.
+            </p>
+        </section>
+
+        <!-- Pillar III: Rot -->
+        <section class="pillar-card pillar-rot">
+            <div class="pillar-meta" data-de="Säule III: Rot" data-en="Pillar III: Red">Säule III: Rot</div>
+            <h2 class="pillar-title" data-de="Imperien & Herrscher" data-en="Empires & Rulers">Imperien & Herrscher</h2>
+            <p class="pillar-description" 
+               data-de="Die absolute Ebene der Macht, imperiale Strategie, Staatskunst und Elite-Scouting." 
+               data-en="The absolute level of power, imperial strategy, statecraft, and elite scouting.">
+               Die absolute Ebene der Macht, imperiale Strategie, Staatskunst und Elite-Scouting.
+            </p>
+        </section>
+
+        <!-- Pillar IV: Blaue Reihe -->
+        <section class="pillar-card pillar-blau">
+            <div class="pillar-meta" data-de="Säule IV: Blaue Reihe" data-en="Pillar IV: Blue Series">Säule IV: Blaue Reihe</div>
+            <h2 class="pillar-title" data-de="Wirtschaftshistorische Industriellen-Editionen" data-en="Economic History & Industrialist Editions">Wirtschaftshistorische Industriellen-Editionen</h2>
+            <p class="pillar-description" 
+               data-de="Der kompromisslose Aufstieg von Industriegiganten und Wirtschaftsgeschichte." 
+               data-en="The uncompromising rise of industrial titans and economic history.">
+               Der kompromisslose Aufstieg von Industriegiganten und Wirtschaftsgeschichte.
+            </p>
+        </section>
+
+        <!-- Pillar V: Bernstein-Serie -->
+        <section class="pillar-card pillar-bernstein">
+            <div class="pillar-meta" data-de="Säule V: Bernstein-Serie" data-en="Pillar V: Amber Series">Säule V: Bernstein-Serie</div>
+            <h2 class="pillar-title" data-de="Bibliophile Jugend-Editionen" data-en="Bibliophile Youth Editions">Bibliophile Jugend-Editionen</h2>
+            <p class="pillar-description" 
+               data-de="Vergessene, anspruchsvolle historische Abenteuerliteratur für die nächste Generation." 
+               data-en="Forgotten, high-gravity historical adventure literature for the next generation.">
+               Vergessene, anspruchsvolle historische Abenteuerliteratur für die nächste Generation.
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Language Switching Engine -->
+    <script>
+        function switchLanguage(lang, button) {
+            // Update active state class on buttons
+            document.querySelectorAll('.lang-btn').forEach(btn => btn.classList.remove('active'));
+            button.classList.add('active');
+            
+            // Loop through and swap text contents based on target data-attributes
+            document.querySelectorAll('[data-de]').forEach(element => {
+                if (lang === 'en') {
+                    element.textContent = element.getAttribute('data-en');
+                } else {
+                    element.textContent = element.getAttribute('data-de');
+                }
+            });
+            
+            // Adjust semantic document locale tag
+            document.documentElement.lang = lang;
+        }
+    </script>
+</body>
+</html>
